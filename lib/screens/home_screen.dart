@@ -9,36 +9,24 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Container(
-              color: Hexcolor('#ff6c70'),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(
-                    Icons.close,
-                    color: Colors.red,
-                  ),
-                  Text(
-                    "Feed",
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        decoration: TextDecoration.none),
-                  ),
-                  Icon(
-                    Icons.settings,
-                    color: Colors.red,
-                  )
-                ],
-              ),
-            ),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
         ),
+        title: Text("Feed"),
+        backgroundColor: Hexcolor('#ff6c70'),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+            Icons.inbox,
+            color: Colors.white,
+          ))
+        ],
       ),
     );
   }
