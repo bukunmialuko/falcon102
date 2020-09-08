@@ -1,6 +1,7 @@
 import 'package:falcon102/widget/nav_header.dart';
 import 'package:falcon102/widget/nav_item.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class NavScreen extends StatefulWidget {
   @override
@@ -12,9 +13,26 @@ class _NavScreenState extends State<NavScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.white,
-      child: SafeArea(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Hexcolor('#ff6c70'),
+        leading: IconButton(
+          icon: Icon(
+            Icons.close,
+            color: Colors.white,
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+            Icons.settings,
+            color: Colors.white,
+          ))
+        ],
+      ),
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
