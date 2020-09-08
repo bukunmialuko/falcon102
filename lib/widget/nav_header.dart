@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -10,7 +9,6 @@ class NavHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: (MediaQuery.of(context).size.height) * 0.4,
       color: Hexcolor('#ff6c70'),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -34,19 +32,19 @@ class NavHeader extends StatelessWidget {
               radius: 40,
             ),
             SizedBox(
-              height: 16,
+              height: 20,
             ),
             Text(
               "Christine Turner",
               style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 22,
                   color: Colors.white,
                   decoration: TextDecoration.none),
             ),
             Text(
               "Fashion Designer",
               style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 16,
                   color: Colors.white,
                   decoration: TextDecoration.none),
             ),
