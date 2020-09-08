@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^0.1.3
   hexcolor: ^1.0.4
   badges: ^1.1.1
+  feather_icons_flutter: ^4.7.4
+  community_material_icon: ^5.4.55
 
 dev_dependencies:
   flutter_test:
