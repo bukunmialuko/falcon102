@@ -10,6 +10,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Hexcolor('#ff6c70'),
+        autofocus: true,
+        onPressed: () {},
+        child: Icon(Icons.filter_list),
+        tooltip: 'Pick Image',
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
         centerTitle: true,
@@ -30,7 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(
-        children: <Widget>[FeedCard(), FeedCard()],
+        children: <Widget>[
+          FeedCard(),
+          FeedCard(),
+        ],
       ),
     );
   }
