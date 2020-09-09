@@ -1,3 +1,6 @@
+import 'package:falcon102/widget/filter_brands.dart';
+import 'package:falcon102/widget/filter_categories.dart';
+import 'package:falcon102/widget/filter_product_for.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -39,59 +42,12 @@ class _FilterScreenState extends State<FilterScreen> {
           ],
         ),
         body: Column(children: <Widget>[
-//          ProductForSection(
-//            selectedProductFor: mProductFor,
-//            selectProductFor: funSelectProductFor,
-//          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border(
-                    bottom:
-                        BorderSide(width: 0.5, color: Colors.grey.shade400))),
-            padding: EdgeInsets.all(24),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                Text(
-                  "BRANDS",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey.shade600),
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-                Wrap(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(4),
-                      color: Colors.grey.shade300,
-                      child: Wrap(
-                        direction: Axis.horizontal,
-                        children: <Widget>[
-                          Text(
-                            'Continue',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey.shade600,
-                            ),
-                          ),
-                          Icon(
-                            Icons.close,
-                            color: Colors.grey,
-                            size: 18,
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          )
+          FilterProductFor(
+            selectedProductFor: mProductFor,
+            selectProductFor: funSelectProductFor,
+          ),
+          FilterBrands(),
+          FilterCategories()
         ]));
   }
 }

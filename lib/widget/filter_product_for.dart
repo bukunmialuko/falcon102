@@ -1,11 +1,11 @@
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 
-class ProductForSection extends StatelessWidget {
+class FilterProductFor extends StatelessWidget {
   final String selectedProductFor;
   final Function selectProductFor;
 
-  const ProductForSection(
+  const FilterProductFor(
       {Key key, this.selectedProductFor, this.selectProductFor})
       : super(key: key);
 
@@ -13,6 +13,7 @@ class ProductForSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+          color: Colors.white,
           border: Border(
               bottom: BorderSide(width: 0.5, color: Colors.grey.shade400))),
       padding: EdgeInsets.all(24),
