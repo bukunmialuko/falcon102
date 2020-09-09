@@ -1,5 +1,6 @@
 import 'package:falcon102/widget/filter_brands.dart';
 import 'package:falcon102/widget/filter_categories.dart';
+import 'package:falcon102/widget/filter_colors.dart';
 import 'package:falcon102/widget/filter_product_for.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -47,7 +48,8 @@ class _FilterScreenState extends State<FilterScreen> {
             selectProductFor: funSelectProductFor,
           ),
           FilterBrands(),
-          FilterCategories()
+          FilterCategories(),
+          FilterColors()
         ]));
   }
 }
