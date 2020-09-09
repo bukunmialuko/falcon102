@@ -1,6 +1,7 @@
 import 'package:falcon102/widget/filter_brands.dart';
 import 'package:falcon102/widget/filter_categories.dart';
 import 'package:falcon102/widget/filter_colors.dart';
+import 'package:falcon102/widget/filter_price_range.dart';
 import 'package:falcon102/widget/filter_product_for.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -12,11 +13,19 @@ class FilterScreen extends StatefulWidget {
 
 class _FilterScreenState extends State<FilterScreen> {
   String mProductFor = "Both";
+  double _lowerValue = 50;
+  double _upperValue = 180;
 
   void funSelectProductFor(String productFor) {
     setState(() {
       mProductFor = productFor;
     });
+  }
+
+  void onDragging(handlerIndex, lowerValue, upperValue) {
+    _lowerValue = lowerValue;
+    _upperValue = upperValue;
+    setState(() {});
   }
 
   @override
@@ -49,6 +58,10 @@ class _FilterScreenState extends State<FilterScreen> {
           ),
           FilterBrands(),
           FilterCategories(),
+          FilterPriceRange(
+              lowerValue: _lowerValue,
+              upperValue: _upperValue,
+              onDragging: onDragging),
           FilterColors()
         ]));
   }
